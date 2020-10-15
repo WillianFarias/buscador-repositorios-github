@@ -1,5 +1,5 @@
 module.exports = {
-  entry: './src/main.js',
+  entry: ['@babel/polyfill', './src/main.js'],
   output: {
     path: __dirname + '/public',
     filename: 'bundle.js',
@@ -13,8 +13,7 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         use:{
-          loader: 'babel-loader',
-          
+          loader: 'babel-loader'
         }
       }
     ]
